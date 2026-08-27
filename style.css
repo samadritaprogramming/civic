@@ -1,167 +1,901 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+:root {
+    --cream: #f7f3eb;
+    --paper: #fffdf8;
+    --navy: #172536;
+    --brown: #6f5135;
+    --gold: #b9965b;
+    --light-brown: #eee5d7;
+    --muted: #746f67;
+    --border: #ddd5c8;
+}
 
-    <title>Profile | Civic Academy</title>
+html {
+    scroll-behavior: smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
+body {
+    background: var(--cream);
+    color: var(--navy);
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-
-    <header class="navbar">
-
-        <a href="index.html" class="logo">
-            <span class="logo-mark">CA</span>
-            <span>Civic Academy</span>
-        </a>
-
-        <nav class="nav-links">
-            <a href="lessons.html">Lessons</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="profile.html" class="active">Profile</a>
-        </nav>
-
-        <a href="profile.html" class="profile-circle">S</a>
-
-    </header>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
 
-    <main class="profile-page">
+/* =========================
+   NAVIGATION
+========================= */
 
-        <section class="profile-hero">
+.navbar {
+    height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+}
 
-            <div class="profile-avatar">
-                S
-            </div>
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 17px;
+}
 
-            <div>
-                <span class="eyebrow">STUDENT PROFILE</span>
+.logo-mark {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 8px;
+}
 
-                <h1>Sam</h1>
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
 
-                <p>
-                    Civic Academy learner
-                </p>
-            </div>
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
 
-        </section>
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--navy);
+}
 
+.nav-button,
+.primary-button {
+    background: var(--navy);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
 
-        <section class="profile-stats">
+.nav-button:hover,
+.primary-button:hover {
+    transform: translateY(-2px);
+}
 
-            <div class="stat-card">
-                <strong>12</strong>
-                <span>Lessons completed</span>
-            </div>
-
-            <div class="stat-card">
-                <strong>42%</strong>
-                <span>Overall progress</span>
-            </div>
-
-            <div class="stat-card">
-                <strong>5</strong>
-                <span>Day streak</span>
-            </div>
-
-            <div class="stat-card">
-                <strong>90%</strong>
-                <span>Average quiz score</span>
-            </div>
-
-        </section>
-
-
-        <section class="profile-section">
-
-            <div class="section-title-row">
-
-                <div>
-                    <span class="eyebrow">ACHIEVEMENTS</span>
-                    <h2>Your badges</h2>
-                </div>
-
-            </div>
-
-
-            <div class="badge-grid">
-
-                <div class="badge-card earned">
-                    <div class="badge-icon">🌱</div>
-                    <h3>First Steps</h3>
-                    <p>Complete your first lesson.</p>
-                </div>
-
-                <div class="badge-card earned">
-                    <div class="badge-icon">🔥</div>
-                    <h3>On a Roll</h3>
-                    <p>Maintain a 5-day learning streak.</p>
-                </div>
-
-                <div class="badge-card locked">
-                    <div class="badge-icon">🏛️</div>
-                    <h3>Civic Scholar</h3>
-                    <p>Complete 25 lessons.</p>
-                </div>
-
-                <div class="badge-card locked">
-                    <div class="badge-icon">🧠</div>
-                    <h3>Quiz Master</h3>
-                    <p>Score 100% on five quizzes.</p>
-                </div>
-
-            </div>
-
-        </section>
+.profile-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--light-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
 
 
-        <section class="profile-section">
+/* =========================
+   TYPOGRAPHY
+========================= */
 
-            <div class="section-title-row">
+h1,
+h2 {
+    font-family: "Archivo Black", sans-serif;
+    line-height: 1.08;
+}
 
-                <div>
-                    <span class="eyebrow">LEARNING HISTORY</span>
-                    <h2>Recent activity</h2>
-                </div>
+h1 {
+    font-size: clamp(48px, 6vw, 82px);
+}
 
-            </div>
+h2 {
+    font-size: 38px;
+}
 
-            <div class="activity-list">
+h3 {
+    line-height: 1.25;
+}
 
-                <div class="activity-item">
-                    <span class="activity-icon">✓</span>
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
 
-                    <div>
-                        <strong>What is Federalism?</strong>
-                        <p>Completed yesterday</p>
-                    </div>
-                </div>
 
-                <div class="activity-item">
-                    <span class="activity-icon">★</span>
+/* =========================
+   HERO
+========================= */
 
-                    <div>
-                        <strong>Government Basics Quiz</strong>
-                        <p>90% · 2 days ago</p>
-                    </div>
-                </div>
+.hero {
+    min-height: 680px;
+    padding: 90px 10%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: center;
+}
 
-            </div>
+.hero-content h1 span {
+    color: var(--brown);
+    display: block;
+}
 
-        </section>
+.hero-content p {
+    max-width: 570px;
+    margin: 28px 0;
+    color: var(--muted);
+    font-size: 17px;
+}
 
-    </main>
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
 
-</body>
+.secondary-button {
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    background: var(--paper);
+}
 
-</html>
+.hero-card {
+    padding: 34px;
+    background: var(--navy);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(23, 37, 54, 0.15);
+}
+
+.hero-card-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    opacity: 0.65;
+}
+
+.hero-icon {
+    font-size: 48px;
+    margin: 65px 0 20px;
+}
+
+.hero-card h3 {
+    font-size: 26px;
+}
+
+.hero-card p {
+    color: #c5cbd1;
+    margin: 12px 0 25px;
+}
+
+.mini-progress,
+.progress-bar,
+.lesson-progress {
+    height: 7px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mini-progress-fill {
+    width: 55%;
+    height: 100%;
+    background: var(--gold);
+}
+
+.progress-label {
+    display: block;
+    margin-top: 9px;
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 100px 10%;
+    background: var(--paper);
+}
+
+.section-heading {
+    max-width: 600px;
+    margin-bottom: 55px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.feature-number {
+    color: var(--gold);
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    margin: 80px 10%;
+    padding: 65px;
+    background: var(--light-brown);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-section h2 {
+    max-width: 600px;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    padding: 65px 8%;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.dashboard-header h1 {
+    font-size: 48px;
+}
+
+.dashboard-header p {
+    color: var(--muted);
+}
+
+.streak-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.streak-icon {
+    font-size: 25px;
+}
+
+.streak-card strong,
+.streak-card span {
+    display: block;
+}
+
+.streak-card span:last-child {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 22px;
+}
+
+.continue-card,
+.progress-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 32px;
+}
+
+.card-header,
+.continue-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header {
+    color: var(--brown);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.continue-card h2 {
+    max-width: 500px;
+    margin: 30px 0 12px;
+}
+
+.continue-card p {
+    color: var(--muted);
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    background: var(--light-brown);
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--brown);
+}
+
+.progress-65 {
+    width: 65%;
+}
+
+.progress-20 {
+    width: 20%;
+}
+
+.progress-0 {
+    width: 0;
+}
+
+.continue-bottom {
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.small-button {
+    padding: 9px 15px;
+    background: var(--navy);
+    color: white;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.progress-card {
+    text-align: center;
+}
+
+.progress-circle {
+    width: 145px;
+    height: 145px;
+    border: 10px solid var(--light-brown);
+    border-top-color: var(--brown);
+    border-right-color: var(--brown);
+    border-radius: 50%;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-circle strong {
+    font-size: 30px;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.progress-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================
+   DASHBOARD SECTIONS
+========================= */
+
+.dashboard-section,
+.profile-section {
+    margin-top: 75px;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 28px;
+}
+
+.section-title-row h2 {
+    font-size: 30px;
+}
+
+.text-link {
+    color: var(--brown);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.lesson-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+    transition: 0.2s ease;
+}
+
+.lesson-card:hover,
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(23, 37, 54, 0.08);
+}
+
+.lesson-icon,
+.course-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--light-brown);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.lesson-category {
+    display: block;
+    margin-top: 22px;
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    font-weight: 800;
+}
+
+.lesson-card h3 {
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.lesson-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.lesson-progress {
+    background: var(--light-brown);
+}
+
+
+/* =========================
+   ACTIVITY
+========================= */
+
+.activity-list {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.activity-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* =========================
+   LESSON LIBRARY
+========================= */
+
+.lessons-page,
+.profile-page {
+    padding: 75px 8%;
+}
+
+.page-header {
+    margin-bottom: 65px;
+}
+
+.page-header h1 {
+    font-size: 60px;
+}
+
+.page-header p {
+    color: var(--muted);
+    margin-top: 15px;
+}
+
+.library-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.library-heading h2 {
+    font-size: 30px;
+}
+
+.library-heading span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.course-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.2s ease;
+}
+
+.course-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.course-top > span {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.course-card h2 {
+    font-size: 28px;
+    margin: 8px 0 12px;
+}
+
+.course-card > p {
+    color: var(--muted);
+    font-size: 14px;
+    max-width: 520px;
+}
+
+.course-info {
+    display: flex;
+    gap: 20px;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 25px 0;
+}
+
+.course-button {
+    display: inline-block;
+    padding: 11px 16px;
+    background: var(--navy);
+    color: white;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 35px;
+}
+
+.profile-hero h1 {
+    font-size: 48px;
+}
+
+.profile-hero p {
+    color: var(--muted);
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.stat-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.stat-card strong {
+    display: block;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 30px;
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.badge-card {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+
+.badge-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.badge-card h3 {
+    font-size: 17px;
+}
+
+.badge-card p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.badge-card.locked {
+    opacity: 0.45;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 8%;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+}
+
+footer p {
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+    }
+
+    .hero-card {
+        max-width: 600px;
+    }
+
+    .feature-grid,
+    .lesson-grid,
+    .profile-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .badge-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 68px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .features,
+    .dashboard,
+    .lessons-page,
+    .profile-page {
+        padding: 55px 6%;
+    }
+
+    .feature-grid,
+    .lesson-grid,
+    .profile-stats,
+    .badge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 25px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 40px;
+    }
+
+    .cta-section {
+        margin: 50px 6%;
+        padding: 40px 25px;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 48px;
+    }
+
+    .profile-hero {
+        align-items: start;
+    }
+
+    .profile-avatar {
+        width: 75px;
+        height: 75px;
+        font-size: 25px;
+    }
+
+    .profile-hero h1 {
+        font-size: 38px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+}
