@@ -5,124 +5,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Profile | Civic Academy</title>
+    <title>Dashboard | Civic Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
-    rel="stylesheet"
->
-
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
+    <header class="navbar">
 
-        <a href="index.html">
-            Civic Academy
+        <a href="index.html" class="logo">
+            <span class="logo-mark">CA</span>
+            <span>Civic Academy</span>
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lessons.html">Learn</a>
-            <a href="dashboard.html">Dashboard</a>
+        <nav class="nav-links">
+            <a href="lessons.html">Lessons</a>
+            <a href="dashboard.html" class="active">Dashboard</a>
             <a href="profile.html">Profile</a>
         </nav>
+
+        <a href="profile.html" class="profile-circle">S</a>
 
     </header>
 
 
-    <main>
+    <main class="dashboard">
 
-        <section>
+        <section class="dashboard-header">
 
-            <p>
-                YOUR PROFILE
-            </p>
+            <div>
+                <span class="eyebrow">YOUR DASHBOARD</span>
 
-            <h1>
-                Maya
-            </h1>
+                <h1>
+                    Welcome back, Sam.
+                </h1>
 
-            <p>
-                Civic Academy student
-            </p>
+                <p>
+                    Keep learning. You're making progress.
+                </p>
+            </div>
 
-        </section>
+            <div class="streak-card">
+                <span class="streak-icon">🔥</span>
 
-
-        <section>
-
-            <h2>
-                Learning Stats
-            </h2>
-
-            <p>
-                Lessons completed: 4
-            </p>
-
-            <p>
-                Knowledge checks: 12
-            </p>
-
-            <p>
-                Current streak: 4 days
-            </p>
+                <div>
+                    <strong>5 day streak</strong>
+                    <span>Keep it going!</span>
+                </div>
+            </div>
 
         </section>
 
 
-        <section>
+        <section class="dashboard-grid">
 
-            <h2>
-                Achievements
-            </h2>
+            <div class="continue-card">
 
-            <ul>
+                <div class="card-header">
+                    <span>CONTINUE LEARNING</span>
+                    <span>65%</span>
+                </div>
 
-                <li>
-                    First Lesson
-                </li>
+                <h2>
+                    The Three Branches
+                    of Government
+                </h2>
 
-                <li>
-                    3 Day Streak
-                </li>
+                <p>
+                    Learn how the legislative, executive,
+                    and judicial branches work together.
+                </p>
 
-                <li>
-                    Government Beginner
-                </li>
+                <div class="progress-bar">
+                    <div class="progress-fill progress-65"></div>
+                </div>
 
-            </ul>
+                <div class="continue-bottom">
+                    <span>4 of 6 sections completed</span>
+
+                    <a href="lessons.html" class="small-button">
+                        Continue →
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <span class="eyebrow">OVERALL PROGRESS</span>
+
+                <div class="progress-circle">
+                    <strong>42%</strong>
+                </div>
+
+                <h3>You're getting there.</h3>
+
+                <p>
+                    12 of 28 lessons completed
+                </p>
+
+            </div>
 
         </section>
 
 
-        <section>
+        <section class="dashboard-section">
 
-            <h2>
-                Your Goals
-            </h2>
+            <div class="section-title-row">
 
-            <p>
-                Keep learning and complete your first
-                Civic Academy learning path.
-            </p>
+                <div>
+                    <span class="eyebrow">EXPLORE</span>
+                    <h2>Your lessons</h2>
+                </div>
+
+                <a href="lessons.html" class="text-link">
+                    View all →
+                </a>
+
+            </div>
+
+
+            <div class="lesson-grid">
+
+                <a href="lessons.html" class="lesson-card">
+
+                    <div class="lesson-icon">🏛️</div>
+
+                    <span class="lesson-category">GOVERNMENT</span>
+
+                    <h3>Branches of Government</h3>
+
+                    <p>6 lessons · Beginner</p>
+
+                    <div class="lesson-progress">
+                        <div class="progress-fill progress-65"></div>
+                    </div>
+
+                </a>
+
+
+                <a href="lessons.html" class="lesson-card">
+
+                    <div class="lesson-icon">📜</div>
+
+                    <span class="lesson-category">FOUNDATIONS</span>
+
+                    <h3>The Constitution</h3>
+
+                    <p>5 lessons · Beginner</p>
+
+                    <div class="lesson-progress">
+                        <div class="progress-fill progress-20"></div>
+                    </div>
+
+                </a>
+
+
+                <a href="lessons.html" class="lesson-card">
+
+                    <div class="lesson-icon">🗳️</div>
+
+                    <span class="lesson-category">ELECTIONS</span>
+
+                    <h3>How Elections Work</h3>
+
+                    <p>7 lessons · Intermediate</p>
+
+                    <div class="lesson-progress">
+                        <div class="progress-fill progress-0"></div>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="dashboard-section">
+
+            <div class="section-title-row">
+
+                <div>
+                    <span class="eyebrow">RECENT ACTIVITY</span>
+                    <h2>Keep up the momentum</h2>
+                </div>
+
+            </div>
+
+            <div class="activity-list">
+
+                <div class="activity-item">
+                    <span class="activity-icon">✓</span>
+
+                    <div>
+                        <strong>Completed: What is Federalism?</strong>
+                        <p>Yesterday</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <span class="activity-icon">★</span>
+
+                    <div>
+                        <strong>Quiz score: 90%</strong>
+                        <p>2 days ago</p>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <span class="activity-icon">→</span>
+
+                    <div>
+                        <strong>Started: The Three Branches</strong>
+                        <p>3 days ago</p>
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
     </main>
-
-
-    <footer>
-
-        <p>
-            © 2026 Civic Academy
-        </p>
-
-    </footer>
 
 </body>
 
