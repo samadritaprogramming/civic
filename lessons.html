@@ -1,241 +1,569 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lessons | Civic Academy</title>
+```
+<title>Learn | Civic Academy</title>
+<meta
+    name="description"
+    content="Explore Civic Academy learning paths and understand government, democracy, and civic life."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+>
+
+<link rel="stylesheet" href="css/style.css">
+```
+
 </head>
 
 <body>
 
-    <header>
+```
+<!-- Navigation -->
 
-        <a href="index.html">
-            Civic Academy
-        </a>
+<nav class="navbar">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="lessons.html">Learn</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="profile.html">Profile</a>
-        </nav>
+    <a href="index.html" class="logo">
+        <span class="logo-mark">C</span>
+        <span>Civic Academy</span>
+    </a>
 
-    </header>
+    <div class="nav-links">
+        <a href="lessons.html">Learn</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="index.html#features">Features</a>
+    </div>
 
+    <a href="dashboard.html" class="nav-button">
+        My progress
+    </a>
 
-    <main>
+</nav>
 
-        <section>
 
-            <p>LEARNING LIBRARY</p>
+<main class="lessons-page">
 
-            <h1>
-                What do you want to understand?
-            </h1>
+    <!-- Page header -->
 
-            <p>
-                Choose a learning path and work through
-                short, interactive lessons.
-            </p>
+    <section class="lessons-hero">
 
-        </section>
-
-
-        <!-- Government -->
-
-        <section>
-
-            <h2>
-                Government Foundations
-            </h2>
-
-            <p>
-                Learn the basics of how the U.S. government works.
-            </p>
-
-
-            <article>
-
-                <h3>
-                    1. What is Government?
-                </h3>
-
-                <p>
-                    Learn why governments exist and what they do.
-                </p>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    2. The Constitution
-                </h3>
-
-                <p>
-                    Discover the document that establishes
-                    the framework of the U.S. government.
-                </p>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    3. Three Branches of Government
-                </h3>
-
-                <p>
-                    Understand the legislative, executive,
-                    and judicial branches.
-                </p>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    4. Congress
-                </h3>
-
-                <p>
-                    Learn how the House and Senate work.
-                </p>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-        </section>
-
-
-        <!-- Democracy -->
-
-        <section>
-
-            <h2>
-                Democracy & Elections
-            </h2>
-
-            <article>
-
-                <h3>
-                    1. What Is Democracy?
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    2. How Elections Work
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    3. Political Parties
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-        </section>
-
-
-        <!-- Civic Life -->
-
-        <section>
-
-            <h2>
-                Civic Life
-            </h2>
-
-            <article>
-
-                <h3>
-                    1. Your Rights
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    2. Local Government
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-
-            <article>
-
-                <h3>
-                    3. How Citizens Participate
-                </h3>
-
-                <a href="lesson.html">
-                    Start
-                </a>
-
-            </article>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <p>
-            © 2026 Civic Academy
+        <p class="eyebrow">
+            LEARNING LIBRARY
         </p>
 
-    </footer>
+        <h1>
+            What do you want to understand?
+        </h1>
+
+        <p>
+            Choose a path, start with a question,
+            and build your understanding one lesson at a time.
+        </p>
+
+    </section>
+
+
+    <!-- Featured path -->
+
+    <section class="featured-path">
+
+        <div class="featured-path-content">
+
+            <p class="card-label">
+                START HERE · GOVERNMENT FOUNDATIONS
+            </p>
+
+            <h2>
+                Who actually runs the country?
+            </h2>
+
+            <p>
+                Start with the basics of the U.S. government —
+                from the Constitution to Congress, the president,
+                and the courts.
+            </p>
+
+            <div class="featured-path-meta">
+                <span>8 lessons</span>
+                <span>~40 minutes</span>
+                <span>Beginner</span>
+            </div>
+
+            <a href="lesson.html" class="button primary">
+                Start learning →
+            </a>
+
+        </div>
+
+        <div class="featured-path-visual">
+            🏛️
+        </div>
+
+    </section>
+
+
+    <!-- Government Foundations -->
+
+    <section class="lesson-library-section">
+
+        <div class="library-section-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    PATH 01
+                </p>
+
+                <h2>
+                    Government Foundations
+                </h2>
+
+                <p>
+                    Learn the basic structure of the U.S. government
+                    and how its institutions work.
+                </p>
+
+            </div>
+
+            <span class="path-count">
+                8 lessons
+            </span>
+
+        </div>
+
+
+        <div class="lesson-list">
+
+            <article class="lesson-list-card completed">
+
+                <div class="lesson-list-number">
+                    01
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        COMPLETED
+                    </p>
+
+                    <h3>
+                        What Is Government?
+                    </h3>
+
+                    <p>
+                        Learn why governments exist and what they do.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Review →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card completed">
+
+                <div class="lesson-list-number">
+                    02
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        COMPLETED
+                    </p>
+
+                    <h3>
+                        The Constitution
+                    </h3>
+
+                    <p>
+                        Discover the document that establishes
+                        the framework of the U.S. government.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Review →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card current">
+
+                <div class="lesson-list-number">
+                    03
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        IN PROGRESS
+                    </p>
+
+                    <h3>
+                        Three Branches of Government
+                    </h3>
+
+                    <p>
+                        Understand the legislative, executive,
+                        and judicial branches.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="button primary lesson-list-button">
+                    Continue →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    04
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 4
+                    </p>
+
+                    <h3>
+                        Congress
+                    </h3>
+
+                    <p>
+                        Learn how the House and Senate work.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Democracy -->
+
+    <section class="lesson-library-section">
+
+        <div class="library-section-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    PATH 02
+                </p>
+
+                <h2>
+                    Democracy & Elections
+                </h2>
+
+                <p>
+                    Understand elections, political parties,
+                    representation, and voting.
+                </p>
+
+            </div>
+
+            <span class="path-count">
+                7 lessons
+            </span>
+
+        </div>
+
+
+        <div class="lesson-list">
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    01
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 1
+                    </p>
+
+                    <h3>
+                        What Is Democracy?
+                    </h3>
+
+                    <p>
+                        Explore the basic ideas behind democratic government.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    02
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 2
+                    </p>
+
+                    <h3>
+                        How Elections Work
+                    </h3>
+
+                    <p>
+                        Learn how voters choose representatives
+                        and how elections are organized.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    03
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 3
+                    </p>
+
+                    <h3>
+                        Political Parties
+                    </h3>
+
+                    <p>
+                        Understand what political parties do
+                        and why they matter.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Civic Life -->
+
+    <section class="lesson-library-section">
+
+        <div class="library-section-heading">
+
+            <div>
+
+                <p class="eyebrow">
+                    PATH 03
+                </p>
+
+                <h2>
+                    Civic Life
+                </h2>
+
+                <p>
+                    Connect government to your rights,
+                    community, media, and everyday life.
+                </p>
+
+            </div>
+
+            <span class="path-count">
+                6 lessons
+            </span>
+
+        </div>
+
+
+        <div class="lesson-list">
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    01
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 1
+                    </p>
+
+                    <h3>
+                        Your Rights
+                    </h3>
+
+                    <p>
+                        Learn about rights and freedoms protected
+                        by the Constitution.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    02
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 2
+                    </p>
+
+                    <h3>
+                        Local Government
+                    </h3>
+
+                    <p>
+                        See how decisions are made in your
+                        city, town, and community.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+
+            <article class="lesson-list-card">
+
+                <div class="lesson-list-number">
+                    03
+                </div>
+
+                <div class="lesson-list-content">
+
+                    <p class="card-label">
+                        LESSON 3
+                    </p>
+
+                    <h3>
+                        How Citizens Participate
+                    </h3>
+
+                    <p>
+                        Explore the many ways people can
+                        participate in civic life.
+                    </p>
+
+                </div>
+
+                <a href="lesson.html" class="lesson-list-action">
+                    Start →
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bottom CTA -->
+
+    <section class="lessons-cta">
+
+        <div>
+
+            <p class="eyebrow">
+                NOT SURE WHERE TO START?
+            </p>
+
+            <h2>
+                Five minutes is enough.
+            </h2>
+
+            <p>
+                Start with Government Foundations and build from there.
+            </p>
+
+        </div>
+
+        <a href="lesson.html" class="button primary">
+            Start a lesson →
+        </a>
+
+    </section>
+
+</main>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <span>
+            © 2026 Civic Academy
+        </span>
+
+        <span>
+            Made for curious students.
+        </span>
+
+    </div>
+
+</footer>
+```
 
 </body>
 
